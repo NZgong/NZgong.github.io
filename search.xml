@@ -87,7 +87,100 @@
 
 <p>其中obj为一个对象，Class表示一个类或者一个接口，当obj为Class的对象，或者是其直接或间接子类，或者是其接口的实现类，结果result都返回true，否则返回false。</p>
 <p>注意：编译器会检查obj是否能转换成右边的Class类型，如果不能转换啧直接报错，如果不能确定类型，则通过编译具体看运行时定。</p>
-]]></content>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>i <span class="token keyword">instanceof</span> <span class="token class-name">Integer</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//编译不通过	i必须是引用类型，不能是基本类型</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>i <span class="token keyword">instanceof</span> <span class="token class-name">Object</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//编译不通过</span></code></pre>
+
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token class-name">Integer</span> integer <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Integer</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>integer <span class="token keyword">instanceof</span>	<span class="token class-name">Integer</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//true</span>
+<span class="token comment">//false	,在 JavaSE规范 中对 instanceof 运算符的规定就是：如果 obj 为 null，那么将返回false。</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token keyword">null</span> <span class="token keyword">instanceof</span> <span class="token class-name">Object</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+
+
+
+<h2 id="Java自动装箱与拆箱"><a href="#Java自动装箱与拆箱" class="headerlink" title="Java自动装箱与拆箱"></a>Java自动装箱与拆箱</h2><p><strong>装箱就是自动将基本数据类型装换为包装器类型（int –&gt; Integer）</strong></p>
+<p><strong>调用方法：Integer的valueOf（int）方法</strong></p>
+<p><strong>拆箱就是自动将包装器类型转换为基本数据类型（Integer –&gt; int）</strong></p>
+<p><strong>调用方法：Integer的intValue方法</strong></p>
+<p>在Java SE5之前，如果要生成一个数值为10 的Integer对象，必须这样进行：</p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token class-name">Integer</span> i <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Integer</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+
+<p>而现在从Java SE5开始就提供了自动装箱的特性，如果要生成一个数值为10的Integer对象，只需要这样就可以了：</p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token class-name">Integer</span> i <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span></code></pre>
+
+<p>面试题1：以下代码会输出什么？</p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Main</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+		<span class="token class-name">Integer</span> i1 <span class="token operator">=</span> <span class="token number">100</span><span class="token punctuation">;</span> 
+        <span class="token class-name">Integer</span> i2 <span class="token operator">=</span> <span class="token number">100</span><span class="token punctuation">;</span> 
+        <span class="token class-name">Integer</span> i3 <span class="token operator">=</span> <span class="token number">200</span><span class="token punctuation">;</span> 
+        <span class="token class-name">Integer</span> i4 <span class="token operator">=</span> <span class="token number">200</span><span class="token punctuation">;</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>i1<span class="token operator">==</span>i2<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>i3<span class="token operator">==</span>i4<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span></code></pre>
+
+<p>运行结果：</p>
+<pre class="language-none"><code class="language-none">true
+false</code></pre>
+
+<p>为什么会出现这样的结果呢？输出结果表明i1和i2指向的是同一个对象，而i3和i4指向的是不同的对象。此时只需看看源码便知究竟，下面这段代码是Integer的valueOf方法的具体实现：</p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token class-name">Integer</span> <span class="token function">valueOf</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>i <span class="token operator">>=</span> <span class="token operator">-</span><span class="token number">128</span> <span class="token operator">&amp;&amp;</span> i <span class="token operator">&lt;=</span> <span class="token class-name">IntegerCache</span><span class="token punctuation">.</span>high<span class="token punctuation">)</span> 
+        <span class="token keyword">return</span> <span class="token class-name">IntegerCache</span><span class="token punctuation">.</span>cache<span class="token punctuation">[</span>i <span class="token operator">+</span> <span class="token number">128</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">else</span>
+   		<span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Integer</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span></code></pre>
+
+<p>其中IntegerCache类的实现类为：</p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">class</span> <span class="token class-name">IntegerCache</span> <span class="token punctuation">&#123;</span> 
+    <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token keyword">int</span> high<span class="token punctuation">;</span>
+    <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">Integer</span> cache<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">static</span> <span class="token punctuation">&#123;</span>
+    	<span class="token keyword">final</span> <span class="token keyword">int</span> low <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">128</span><span class="token punctuation">;</span>
+        
+    	<span class="token comment">// high value may be configured by property int h = 127;</span>
+   		<span class="token keyword">if</span> <span class="token punctuation">(</span>integerCacheHighPropValue <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+            <span class="token comment">// Use Long.decode here to avoid invoking methods that</span>
+            <span class="token comment">// require Integer's autoboxing cache to be initialized</span>
+            <span class="token keyword">int</span> i<span class="token operator">=</span><span class="token class-name">Long</span><span class="token punctuation">.</span><span class="token function">decode</span><span class="token punctuation">(</span>integerCacheHighPropValue<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">intValue</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            i <span class="token operator">=</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span> <span class="token number">127</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token comment">// Maximum array size is Integer.MAX_VALUE</span>
+            h <span class="token operator">=</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">min</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span> <span class="token class-name">Integer</span><span class="token punctuation">.</span>MAX_VALUE <span class="token operator">-</span> <span class="token operator">-</span>low<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    	<span class="token punctuation">&#125;</span>
+    	high <span class="token operator">=</span> h<span class="token punctuation">;</span>
+        
+    	cache <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Integer</span><span class="token punctuation">[</span><span class="token punctuation">(</span>high <span class="token operator">-</span> low<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword">int</span> j <span class="token operator">=</span> low<span class="token punctuation">;</span>
+    	<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> k <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> k <span class="token operator">&lt;</span> cache<span class="token punctuation">.</span>length<span class="token punctuation">;</span> k<span class="token operator">++</span><span class="token punctuation">)</span> cache<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Integer</span><span class="token punctuation">(</span>j<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span>
+
+	<span class="token keyword">private</span> <span class="token class-name">IntegerCache</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+</code></pre>
+
+<p>从这两段代码可以看出，在通过val方法创建Integer对象的时候，如果数值在[-128,127]之间，便返回指向InterCache.cache中已经存在的对象的引用；否则创建一个新的Internet对象。</p>
+<p>上面的代码中i1和i2的数值为100，因此会直接从cache中取已经存在的对象，所以i1和i2指向的是同一  个对象，而i3和i4则是分别指向不同的对象。</p>
+<p>面试题2：以下代码输出什么？</p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Main</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        
+        <span class="token class-name">Double</span> i1 <span class="token operator">=</span> <span class="token number">100.0</span><span class="token punctuation">;</span>
+        <span class="token class-name">Double</span> i2 <span class="token operator">=</span> <span class="token number">100.0</span><span class="token punctuation">;</span>
+        <span class="token class-name">Double</span> i3 <span class="token operator">=</span> <span class="token number">200.0</span><span class="token punctuation">;</span>
+        <span class="token class-name">Double</span> i4 <span class="token operator">=</span> <span class="token number">200.0</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>i1<span class="token operator">==</span>i2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>i3<span class="token operator">==</span>i4<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+	</code></pre>
+
+<p>运行结果：</p>
+<pre class="language-none"><code class="language-none">false 
+false</code></pre>
+
+<p>原因： 在某个范围内的整型数值的个数是有限的，而浮点数却不是。</p>
+<h2 id="重载和重写的区别"><a href="#重载和重写的区别" class="headerlink" title="重载和重写的区别"></a>重载和重写的区别</h2>]]></content>
       <categories>
         <category>面试题</category>
       </categories>
