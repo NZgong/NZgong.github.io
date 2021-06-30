@@ -158,13 +158,6 @@
   </url>
   
   <url>
-    <loc>https://nzgong.com/tags/%E9%9D%A2%E8%AF%95/</loc>
-    <lastmod>2021-06-30</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://nzgong.com/tags/%E5%8D%9A%E5%AE%A2/</loc>
     <lastmod>2021-06-30</lastmod>
     <changefreq>daily</changefreq>
@@ -173,6 +166,13 @@
   
   <url>
     <loc>https://nzgong.com/tags/%E5%A4%87%E4%BB%BD/</loc>
+    <lastmod>2021-06-30</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://nzgong.com/tags/%E9%9D%A2%E8%AF%95/</loc>
     <lastmod>2021-06-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -188,14 +188,14 @@
   </url>
   
   <url>
-    <loc>https://nzgong.com/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/</loc>
+    <loc>https://nzgong.com/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</loc>
     <lastmod>2021-06-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://nzgong.com/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</loc>
+    <loc>https://nzgong.com/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/</loc>
     <lastmod>2021-06-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
