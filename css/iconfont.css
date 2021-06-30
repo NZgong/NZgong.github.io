@@ -1,8 +1,8 @@
 @font-face {
   font-family: "iconfont"; /* Project id 2641600 */
-  src: url('//at.alicdn.com/t/font_2641600_nfuge1boa2.woff2?t=1624988313528') format('woff2'),
-       url('//at.alicdn.com/t/font_2641600_nfuge1boa2.woff?t=1624988313528') format('woff'),
-       url('//at.alicdn.com/t/font_2641600_nfuge1boa2.ttf?t=1624988313528') format('truetype');
+  src: url('//at.alicdn.com/t/font_2641600_u3ja0ojeg0j.woff2?t=1625031214466') format('woff2'),
+       url('//at.alicdn.com/t/font_2641600_u3ja0ojeg0j.woff?t=1625031214466') format('woff'),
+       url('//at.alicdn.com/t/font_2641600_u3ja0ojeg0j.ttf?t=1625031214466') format('truetype');
 }
 
 .iconfont {
@@ -11,6 +11,58 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-android-fill:before {
+  content: "\e881";
+}
+
+.icon-apple-fill:before {
+  content: "\e882";
+}
+
+.icon-QQ:before {
+  content: "\e883";
+}
+
+.icon-wechat-fill:before {
+  content: "\e884";
+}
+
+.icon-github-fill:before {
+  content: "\e885";
+}
+
+.icon-weibo-circle-fill:before {
+  content: "\e88a";
+}
+
+.icon-zhihu-circle-fill:before {
+  content: "\e88b";
+}
+
+.icon-bug:before {
+  content: "\e8e9";
+}
+
+.icon-whatsapp:before {
+  content: "\e8ea";
+}
+
+.icon-caret-right:before {
+  content: "\e8ec";
+}
+
+.icon-fast-backward:before {
+  content: "\e8ed";
+}
+
+.icon-fast-forward:before {
+  content: "\e8ee";
+}
+
+.icon-eye-close:before {
+  content: "\e8ff";
 }
 
 .icon-time-circle:before {
