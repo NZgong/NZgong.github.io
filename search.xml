@@ -1,58 +1,191 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search> 
-  
-  
+<search>
+  <entry>
+    <title></title>
+    <url>/archives/1.html</url>
+    <content><![CDATA[<hr>
+<h2 id="title：第二章：变量和数据类型"><a href="#title：第二章：变量和数据类型" class="headerlink" title="title：第二章：变量和数据类型"></a>title：第二章：变量和数据类型</h2><h2 id="1、变量"><a href="#1、变量" class="headerlink" title="1、变量"></a>1、变量</h2><pre><code>定义：一个数据存储空间的表示      
+语法：
+    数据类型 变量名;
+    变量名 = 变量值;
+或者
+    数据类型 变量名 = 变量值;
+注：
+    命名规则：首字母：字母（26个字母，大写小写）、下划线、$符号，不能数字开头
+    其余部分：字母，数字，下划线，和 $ 符号，不能为其它符号
+
+    重要的规则为：
+        驼峰命名法：第一个单词首字母小写，其它部分单词首字母大写
+        注意：第一个单词最好不要是只有一个小写字母，变量的命名要通俗易懂
+        类名：首字母按照规范，首字母大写，也参照驼峰命名法
+        变量的声明，不能重名，而且不能跟java中的&quot;关键字&quot;一致
+</code></pre>
+<h2 id="2、数据类型-8种-："><a href="#2、数据类型-8种-：" class="headerlink" title="2、数据类型(8种)："></a>2、数据类型(8种)：</h2><pre><code>字节：byte（一个字节8位）
+字符：char（2个字节16位）
+短整形：short（2字节16位）
+整形：int（4字节32位）
+浮点型：float（4个字节32位）
+浮点型：double（8个字节64位）
+长整型：long（8个字节64位）
+布尔类型：boolean （只能是true和false）
+
+注意：String不是基本数据类型，它是一个类（java.lang.String）
+</code></pre>
+<h2 id="3、"><a href="#3、" class="headerlink" title="3、+"></a>3、+</h2><p>代表字符串连接（当进行数值计算时候，也代表加法）</p>
+<h2 id="4、"><a href="#4、" class="headerlink" title="4、="></a>4、=</h2><p>java中的赋值符号，不是判断两个值是否相等，是将等号右边的值赋给左边的变量</p>
+<pre><code>注意：
+    变量使用前，必须给定义的变量初始化（赋值），否则编译错误。
+</code></pre>
+<h2 id="5、常量的定义："><a href="#5、常量的定义：" class="headerlink" title="5、常量的定义："></a>5、常量的定义：</h2><pre><code>语法：
+    final 数类型 变量名 = 变量值;
+注意：
+    1）常量名通常大写
+    2）不同分词使用下划线分隔
+    3）只能被赋值一次，通常定义时即对其初始化
+示例：
+    // 定义一个常量
+    final double MATH_PI = 3.14;
+</code></pre>
+<h2 id="6、Scanner："><a href="#6、Scanner：" class="headerlink" title="6、Scanner："></a>6、Scanner：</h2><pre><code>作用：接收用户输入（键盘输入）
+写法：
+    // 创建Scanner对象
+    Scanner input = new Scanner(System.in);
+注意：
+    要引入Scanner类--import java.util.Scanner;
+获取数据：
+    输入的字符串：input.next(); // nextLine()
+    输入的数字：input.nextInt();
+    输入的浮点型：input.nextDouble();
+</code></pre>
+<h2 id="7、类型自动转换："><a href="#7、类型自动转换：" class="headerlink" title="7、类型自动转换："></a>7、类型自动转换：</h2><pre><code>低精度向高精度会自动转换
+规则：
+    规则1：如果一个操作数为double型，则整个表达式可提升为double型
+
+    规则2：满足自动类型转换的条件
+        两种类型要兼容
+        数值类型（整型和浮点型）互相兼容
+        目标类型大于源类型： 
+        例如：double 型大于 int 型
+</code></pre>
+<h2 id="8、类型强制转换："><a href="#8、类型强制转换：" class="headerlink" title="8、类型强制转换："></a>8、类型强制转换：</h2><pre><code>高精度向低精度需要强转，只保留整数位，精度自动舍弃
+注意：强转写法 -- 小括号括起来
+</code></pre>
+<h2 id="9、赋值运算符："><a href="#9、赋值运算符：" class="headerlink" title="9、赋值运算符："></a>9、赋值运算符：</h2><pre><code>语法：变量名 = 表达式;
+    表达式：表达式就是符号（如加号、减号）与操作数（如b，3等）的组合
+例如：int sum = num1 + num2;
+注意：赋值运算符的优先级是最低的
+</code></pre>
+<h2 id="10、算数运算符："><a href="#10、算数运算符：" class="headerlink" title="10、算数运算符："></a>10、算数运算符：</h2><pre><code>    加+ 减- 乘* 除/ 求余% 
+    + ： 加  int add = 5+2; // 7
+    - ： 减  int sub = 5-2; // 3
+    * ： 乘  int min = 5*2; // 10
+    / ： 除  int chu = 5/2; // 2
+    % ： 求余 int mod = 5%2; // 1
+    加加++ 减减--
+    写变量前：先变量值加减，后使用变量值
+    写变量后：先使用变量值，后变量值加减
     
-    <entry>
-      <title></title>
-      <link href="/archives/1.html"/>
-      <url>/archives/1.html</url>
-      
-        <content type="html"><![CDATA[<hr><h2 id="title：第二章：变量和数据类型"><a href="#title：第二章：变量和数据类型" class="headerlink" title="title：第二章：变量和数据类型"></a>title：第二章：变量和数据类型</h2><h2 id="1、变量"><a href="#1、变量" class="headerlink" title="1、变量"></a>1、变量</h2><pre><code>定义：一个数据存储空间的表示      语法：    数据类型 变量名;    变量名 = 变量值;或者    数据类型 变量名 = 变量值;注：    命名规则：首字母：字母（26个字母，大写小写）、下划线、$符号，不能数字开头    其余部分：字母，数字，下划线，和 $ 符号，不能为其它符号    重要的规则为：        驼峰命名法：第一个单词首字母小写，其它部分单词首字母大写        注意：第一个单词最好不要是只有一个小写字母，变量的命名要通俗易懂        类名：首字母按照规范，首字母大写，也参照驼峰命名法        变量的声明，不能重名，而且不能跟java中的&quot;关键字&quot;一致</code></pre><h2 id="2、数据类型-8种-："><a href="#2、数据类型-8种-：" class="headerlink" title="2、数据类型(8种)："></a>2、数据类型(8种)：</h2><pre><code>字节：byte（一个字节8位）字符：char（2个字节16位）短整形：short（2字节16位）整形：int（4字节32位）浮点型：float（4个字节32位）浮点型：double（8个字节64位）长整型：long（8个字节64位）布尔类型：boolean （只能是true和false）注意：String不是基本数据类型，它是一个类（java.lang.String）</code></pre><h2 id="3、"><a href="#3、" class="headerlink" title="3、+"></a>3、+</h2><p>代表字符串连接（当进行数值计算时候，也代表加法）</p><h2 id="4、"><a href="#4、" class="headerlink" title="4、="></a>4、=</h2><p>java中的赋值符号，不是判断两个值是否相等，是将等号右边的值赋给左边的变量</p><pre><code>注意：    变量使用前，必须给定义的变量初始化（赋值），否则编译错误。</code></pre><h2 id="5、常量的定义："><a href="#5、常量的定义：" class="headerlink" title="5、常量的定义："></a>5、常量的定义：</h2><pre><code>语法：    final 数类型 变量名 = 变量值;注意：    1）常量名通常大写    2）不同分词使用下划线分隔    3）只能被赋值一次，通常定义时即对其初始化示例：    // 定义一个常量    final double MATH_PI = 3.14;</code></pre><h2 id="6、Scanner："><a href="#6、Scanner：" class="headerlink" title="6、Scanner："></a>6、Scanner：</h2><pre><code>作用：接收用户输入（键盘输入）写法：    // 创建Scanner对象    Scanner input = new Scanner(System.in);注意：    要引入Scanner类--import java.util.Scanner;获取数据：    输入的字符串：input.next(); // nextLine()    输入的数字：input.nextInt();    输入的浮点型：input.nextDouble();</code></pre><h2 id="7、类型自动转换："><a href="#7、类型自动转换：" class="headerlink" title="7、类型自动转换："></a>7、类型自动转换：</h2><pre><code>低精度向高精度会自动转换规则：    规则1：如果一个操作数为double型，则整个表达式可提升为double型    规则2：满足自动类型转换的条件        两种类型要兼容        数值类型（整型和浮点型）互相兼容        目标类型大于源类型：         例如：double 型大于 int 型</code></pre><h2 id="8、类型强制转换："><a href="#8、类型强制转换：" class="headerlink" title="8、类型强制转换："></a>8、类型强制转换：</h2><pre><code>高精度向低精度需要强转，只保留整数位，精度自动舍弃注意：强转写法 -- 小括号括起来</code></pre><h2 id="9、赋值运算符："><a href="#9、赋值运算符：" class="headerlink" title="9、赋值运算符："></a>9、赋值运算符：</h2><pre><code>语法：变量名 = 表达式;    表达式：表达式就是符号（如加号、减号）与操作数（如b，3等）的组合例如：int sum = num1 + num2;注意：赋值运算符的优先级是最低的</code></pre><h2 id="10、算数运算符："><a href="#10、算数运算符：" class="headerlink" title="10、算数运算符："></a>10、算数运算符：</h2><pre><code>    加+ 减- 乘* 除/ 求余%     + ： 加  int add = 5+2; // 7    - ： 减  int sub = 5-2; // 3    * ： 乘  int min = 5*2; // 10    / ： 除  int chu = 5/2; // 2    % ： 求余 int mod = 5%2; // 1    加加++ 减减--    写变量前：先变量值加减，后使用变量值    写变量后：先使用变量值，后变量值加减    复合运算符：    += -= *= /= %=例如：num += 2; --&gt; num = num + 2;注意：是单个运算符，当类型不匹配不能转换等价示例：    short a = 4;    a += 5; // 编译通过    a = a + 4; // 编译不通过，类型不匹配</code></pre><h2 id="11、关系运算符："><a href="#11、关系运算符：" class="headerlink" title="11、关系运算符："></a>11、关系运算符：</h2><pre><code>== 等于 判断是否相等!= 不等于 判断不相等&gt; 大于 判断大于&lt; 小于 判断小于&gt;= 大于等于 判断大于等于&lt;= 小于等于 判断小于等于注意：&gt; &lt; &gt;= &lt;= 只适用于数值类型判断</code></pre><h2 id="12、逻辑运算符："><a href="#12、逻辑运算符：" class="headerlink" title="12、逻辑运算符："></a>12、逻辑运算符：</h2><pre><code>短路与：&amp;&amp; 两边表达式都为true，结果才为true，第一个表达式为false，不看第二个表达式短路或：|| 两边表达式都为false，结果才为false，第一个表达式为true，不看第二个表达式非：！ 取反示例：        int a1 = 8;        int b1 = 9;        System.out.println((++a1 == b1) &amp;&amp; (++a1 != b1)); // true        System.out.println(a1); // 10        int a2 = 8;        int b2 = 9;        System.out.println((++a2 == b2) || (++a2 != b2)); // true        System.out.println(a2); // 9</code></pre><h2 id="13、三元运算符"><a href="#13、三元运算符" class="headerlink" title="13、三元运算符"></a>13、三元运算符</h2><pre><code>语法：条件表达式 ？ 表达式1 ：表达式2;    条件表达式为true,结果为表达式1的值，否则为表达式2的值    表达式1或者2的类型必须跟定义变量类型一致</code></pre><h2 id="14、运算符优先级"><a href="#14、运算符优先级" class="headerlink" title="14、运算符优先级"></a>14、运算符优先级</h2><pre><code>1)优先级别最低的是赋值运算符2)可以通过()控制表达式的运算顺序，()优先级最高3)算术运算符 &gt; 关系运算符 &gt; 逻辑运算符灵活用法：当不确定优先级的时候，优先选择使用小括号()</code></pre><h2 id="15、扩展"><a href="#15、扩展" class="headerlink" title="15、扩展"></a>15、扩展</h2><pre><code>    // 位运算 &amp; 11为1 | 00为0 ^ 同为0异为1    // 先转为二进制，然后按位运算     int x = 2;    int y = 3;    System.out.println(x &amp; y); // 2    System.out.println(x | y); // 3    System.out.println(x ^ y); // 1    // 十进制转二进制口诀：除二取余，然后倒序排列，高位补零</code></pre>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Hello World</title>
-      <link href="/archives/16107.html"/>
-      <url>/archives/16107.html</url>
-      
-        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class="language-bash" data-language="bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span></code></pre><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class="language-bash" data-language="bash"><code class="language-bash">$ hexo server</code></pre><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class="language-bash" data-language="bash"><code class="language-bash">$ hexo generate</code></pre><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class="language-bash" data-language="bash"><code class="language-bash">$ hexo deploy</code></pre><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>博客备份</title>
-      <link href="/archives/34169.html"/>
-      <url>/archives/34169.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="备份博客"><a href="#备份博客" class="headerlink" title="备份博客"></a>备份博客</h2><h3 id="创建新分支"><a href="#创建新分支" class="headerlink" title="创建新分支"></a>创建新分支</h3><p>打开自己的github里存放博文页面文件的仓库（确保已有主分支），建立一个新的分支hexo，并将其设置为默认分支。</p><p><img src="https://cdn.jsdelivr.net/gh/nzgong/IMG/20210629112623.png"></p><p>本地的博客原始目录里只有.deploy_git文件（里面存放的是上传到博客仓库的页面文件），并没有.git文件，所以要先在其他地方新建空目录，将仓库的hexo分支clone下来，再将里面的.git文件复制到本地的博客目录中。</p><p><img src="https://cdn.jsdelivr.net/gh/nzgong/IMG/20210629113040.png"></p><p>检查主题文件下有没有克隆时产生的.git文件，有的话要删掉，因为git不能嵌套上传，会导致主题文件无法上传，备份出问题。</p><h3 id="备份"><a href="#备份" class="headerlink" title="备份"></a>备份</h3><p>在博客根目录下执行如下命令</p><pre class="language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">git</span> <span class="token function">add</span> <span class="token builtin class-name">.</span>$ <span class="token function">git</span> commit -m <span class="token string">"备份"</span>$ <span class="token function">git</span> push origin hexo</code></pre><h3 id="日常更新命令"><a href="#日常更新命令" class="headerlink" title="日常更新命令"></a>日常更新命令</h3><pre class="language-bash" data-language="bash"><code class="language-bash">hexo clean<span class="token function">git</span> <span class="token function">add</span> <span class="token builtin class-name">.</span><span class="token function">git</span> commit -m <span class="token string">"备份"</span><span class="token function">git</span> pushhexo ghexo d</code></pre><h2 id="恢复博客"><a href="#恢复博客" class="headerlink" title="恢复博客"></a>恢复博客</h2><h3 id="克隆项目到本地"><a href="#克隆项目到本地" class="headerlink" title="克隆项目到本地"></a>克隆项目到本地</h3><pre class="language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">git</span> clone https://github.com/yourgithubname/yourgithubname.github.io</code></pre><h3 id="恢复博客-1"><a href="#恢复博客-1" class="headerlink" title="恢复博客"></a>恢复博客</h3><pre class="language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">npm</span> <span class="token function">install</span> hexo-cli$ <span class="token function">npm</span> <span class="token function">install</span>$ <span class="token function">npm</span> <span class="token function">install</span> hexo-deployer-git</code></pre>]]></content>
-      
-      
+复合运算符：
+    += -= *= /= %=
+例如：num += 2; --&gt; num = num + 2;
+注意：是单个运算符，当类型不匹配不能转换等价
+示例：
+    short a = 4;
+    a += 5; // 编译通过
+    a = a + 4; // 编译不通过，类型不匹配
+</code></pre>
+<h2 id="11、关系运算符："><a href="#11、关系运算符：" class="headerlink" title="11、关系运算符："></a>11、关系运算符：</h2><pre><code>== 等于 判断是否相等
+!= 不等于 判断不相等
+&gt; 大于 判断大于
+&lt; 小于 判断小于
+&gt;= 大于等于 判断大于等于
+&lt;= 小于等于 判断小于等于
+注意：&gt; &lt; &gt;= &lt;= 只适用于数值类型判断
+</code></pre>
+<h2 id="12、逻辑运算符："><a href="#12、逻辑运算符：" class="headerlink" title="12、逻辑运算符："></a>12、逻辑运算符：</h2><pre><code>短路与：&amp;&amp; 两边表达式都为true，结果才为true，第一个表达式为false，不看第二个表达式
+短路或：|| 两边表达式都为false，结果才为false，第一个表达式为true，不看第二个表达式
+非：！ 取反
+示例：
+        int a1 = 8;
+        int b1 = 9;
+        System.out.println((++a1 == b1) &amp;&amp; (++a1 != b1)); // true
+        System.out.println(a1); // 10
+        int a2 = 8;
+        int b2 = 9;
+        System.out.println((++a2 == b2) || (++a2 != b2)); // true
+        System.out.println(a2); // 9
+</code></pre>
+<h2 id="13、三元运算符"><a href="#13、三元运算符" class="headerlink" title="13、三元运算符"></a>13、三元运算符</h2><pre><code>语法：条件表达式 ？ 表达式1 ：表达式2;
+    条件表达式为true,结果为表达式1的值，否则为表达式2的值
+    表达式1或者2的类型必须跟定义变量类型一致
+</code></pre>
+<h2 id="14、运算符优先级"><a href="#14、运算符优先级" class="headerlink" title="14、运算符优先级"></a>14、运算符优先级</h2><pre><code>1)优先级别最低的是赋值运算符
+2)可以通过()控制表达式的运算顺序，()优先级最高
+3)算术运算符 &gt; 关系运算符 &gt; 逻辑运算符
+
+灵活用法：当不确定优先级的时候，优先选择使用小括号()
+</code></pre>
+<h2 id="15、扩展"><a href="#15、扩展" class="headerlink" title="15、扩展"></a>15、扩展</h2><pre><code>    // 位运算 &amp; 11为1 | 00为0 ^ 同为0异为1
+    // 先转为二进制，然后按位运算 
+    int x = 2;
+    int y = 3;
+    System.out.println(x &amp; y); // 2
+    System.out.println(x | y); // 3
+    System.out.println(x ^ y); // 1
+    // 十进制转二进制口诀：除二取余，然后倒序排列，高位补零
+</code></pre>
+]]></content>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/archives/16107.html</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class="language-bash" data-language="bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span></code></pre>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class="language-bash" data-language="bash"><code class="language-bash">$ hexo server</code></pre>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class="language-bash" data-language="bash"><code class="language-bash">$ hexo generate</code></pre>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class="language-bash" data-language="bash"><code class="language-bash">$ hexo deploy</code></pre>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>博客备份</title>
+    <url>/archives/34169.html</url>
+    <content><![CDATA[<h2 id="备份博客"><a href="#备份博客" class="headerlink" title="备份博客"></a>备份博客</h2><h3 id="创建新分支"><a href="#创建新分支" class="headerlink" title="创建新分支"></a>创建新分支</h3><p>打开自己的github里存放博文页面文件的仓库（确保已有主分支），建立一个新的分支hexo，并将其设置为默认分支。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/nzgong/IMG/20210629112623.png"></p>
+<p>本地的博客原始目录里只有.deploy_git文件（里面存放的是上传到博客仓库的页面文件），并没有.git文件，所以要先在其他地方新建空目录，将仓库的hexo分支clone下来，再将里面的.git文件复制到本地的博客目录中。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/nzgong/IMG/20210629113040.png"></p>
+<p>检查主题文件下有没有克隆时产生的.git文件，有的话要删掉，因为git不能嵌套上传，会导致主题文件无法上传，备份出问题。</p>
+<h3 id="备份"><a href="#备份" class="headerlink" title="备份"></a>备份</h3><p>在博客根目录下执行如下命令</p>
+<pre class="language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">git</span> <span class="token function">add</span> <span class="token builtin class-name">.</span>
+$ <span class="token function">git</span> commit -m <span class="token string">"备份"</span>
+$ <span class="token function">git</span> push origin hexo</code></pre>
+
+<h3 id="日常更新命令"><a href="#日常更新命令" class="headerlink" title="日常更新命令"></a>日常更新命令</h3><pre class="language-bash" data-language="bash"><code class="language-bash">hexo clean
+<span class="token function">git</span> <span class="token function">add</span> <span class="token builtin class-name">.</span>
+<span class="token function">git</span> commit -m <span class="token string">"备份"</span>
+<span class="token function">git</span> push
+hexo g
+hexo d</code></pre>
+
+<h2 id="恢复博客"><a href="#恢复博客" class="headerlink" title="恢复博客"></a>恢复博客</h2><h3 id="克隆项目到本地"><a href="#克隆项目到本地" class="headerlink" title="克隆项目到本地"></a>克隆项目到本地</h3><pre class="language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">git</span> clone https://github.com/yourgithubname/yourgithubname.github.io</code></pre>
+
+<h3 id="恢复博客-1"><a href="#恢复博客-1" class="headerlink" title="恢复博客"></a>恢复博客</h3><pre class="language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">npm</span> <span class="token function">install</span> hexo-cli
+$ <span class="token function">npm</span> <span class="token function">install</span>
+$ <span class="token function">npm</span> <span class="token function">install</span> hexo-deployer-git</code></pre>
+
+]]></content>
       <categories>
-          
-          <category> 博客搭建 </category>
-          
+        <category>博客搭建</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> 博客，备份 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-  
-  
+      <tags>
+        <tag>博客，备份</tag>
+      </tags>
+  </entry>
 </search>
