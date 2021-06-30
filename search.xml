@@ -8,7 +8,8 @@
         <category>Java</category>
       </categories>
       <tags>
-        <tag>Java，JVM</tag>
+        <tag>Java</tag>
+        <tag>JVM</tag>
       </tags>
   </entry>
   <entry>
@@ -196,7 +197,8 @@ $ <span class="token function">npm</span> <span class="token function">install</
         <category>博客搭建</category>
       </categories>
       <tags>
-        <tag>博客，备份</tag>
+        <tag>博客</tag>
+        <tag>备份</tag>
       </tags>
   </entry>
 </search>
