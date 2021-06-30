@@ -144,6 +144,13 @@
 
   
   <url>
+    <loc>http://nzgong.com/tags/Java%EF%BC%8CJVM/</loc>
+    <lastmod>2021-06-30</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://nzgong.com/tags/%E5%8D%9A%E5%AE%A2%EF%BC%8C%E5%A4%87%E4%BB%BD/</loc>
     <lastmod>2021-06-30</lastmod>
     <changefreq>daily</changefreq>
@@ -151,6 +158,13 @@
   </url>
   
 
+  
+  <url>
+    <loc>http://nzgong.com/categories/Java/</loc>
+    <lastmod>2021-06-30</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
   
   <url>
     <loc>http://nzgong.com/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</loc>
