@@ -3,11 +3,11 @@
   <title>NZgongの博客</title>
   
   
-  <link href="http://nzgong.com/atom.xml" rel="self"/>
+  <link href="https://nzgong.com/atom.xml" rel="self"/>
   
-  <link href="http://nzgong.com/"/>
+  <link href="https://nzgong.com/"/>
   <updated>2021-06-30T06:37:03.743Z</updated>
-  <id>http://nzgong.com/</id>
+  <id>https://nzgong.com/</id>
   
   <author>
     <name>NZgong</name>
@@ -18,27 +18,27 @@
   
   <entry>
     <title>JVM&amp;Java虚拟机</title>
-    <link href="http://nzgong.com/archives/6037eeb8.html"/>
-    <id>http://nzgong.com/archives/6037eeb8.html</id>
+    <link href="https://nzgong.com/archives/6037eeb8.html"/>
+    <id>https://nzgong.com/archives/6037eeb8.html</id>
     <published>2021-06-30T01:44:57.000Z</published>
     <updated>2021-06-30T06:37:03.743Z</updated>
     
     
     
     
-    <category term="Java" scheme="http://nzgong.com/categories/Java/"/>
+    <category term="Java" scheme="https://nzgong.com/categories/Java/"/>
     
     
-    <category term="Java" scheme="http://nzgong.com/tags/Java/"/>
+    <category term="Java" scheme="https://nzgong.com/tags/Java/"/>
     
-    <category term="JVM" scheme="http://nzgong.com/tags/JVM/"/>
+    <category term="JVM" scheme="https://nzgong.com/tags/JVM/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="http://nzgong.com/archives/16107.html"/>
-    <id>http://nzgong.com/archives/16107.html</id>
+    <link href="https://nzgong.com/archives/16107.html"/>
+    <id>https://nzgong.com/archives/16107.html</id>
     <published>2021-06-29T13:41:52.029Z</published>
     <updated>2021-06-29T13:41:52.029Z</updated>
     
@@ -57,8 +57,8 @@
   
   <entry>
     <title>博客备份</title>
-    <link href="http://nzgong.com/archives/34169.html"/>
-    <id>http://nzgong.com/archives/34169.html</id>
+    <link href="https://nzgong.com/archives/34169.html"/>
+    <id>https://nzgong.com/archives/34169.html</id>
     <published>2021-06-29T03:16:10.000Z</published>
     <updated>2021-06-30T06:36:38.640Z</updated>
     
@@ -69,12 +69,12 @@
     
     
     
-    <category term="博客搭建" scheme="http://nzgong.com/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    <category term="博客搭建" scheme="https://nzgong.com/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
     
     
-    <category term="博客" scheme="http://nzgong.com/tags/%E5%8D%9A%E5%AE%A2/"/>
+    <category term="博客" scheme="https://nzgong.com/tags/%E5%8D%9A%E5%AE%A2/"/>
     
-    <category term="备份" scheme="http://nzgong.com/tags/%E5%A4%87%E4%BB%BD/"/>
+    <category term="备份" scheme="https://nzgong.com/tags/%E5%A4%87%E4%BB%BD/"/>
     
   </entry>
   
